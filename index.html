@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Etch-a-Sketch</title>
+</head>
+<body>
+    <div class="flexContainer">
+    <div class="title"><h1>Etch-a-Sketch</h1></div>
+    Click to turn colouring on or off.
+    <div class="colouring">You are Colouring</div>
+    <div class="container">
+        <div class="board"></div>
+        <div class="buttonContainer">
+            <button onclick="setColour('black')" >Black</button>
+            <button onclick="setColour('white')" >White</button>
+            <button onclick="setColour('random')" >Random Mode</button>
+            <input id="customColour" type="color"/>
+            <button onclick="clearBoard()" >Clear Board</button>
+        </div>
+       
+        <div class="sliderContainer">
+            <input type="range"
+            min="2" 
+            max="100" 
+            value="20" 
+            class="slider" 
+            id="range" 
+            onchange="changeBoardSize(this.value)"
+            oninput="this.nextElementSibling.value = this.value"
+            />
+            <output>20</output>
+        </div>
+    </div>
+</div>
+</body>
+<script src="main.js"></script>
+</html>
